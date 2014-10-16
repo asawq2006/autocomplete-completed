@@ -5,11 +5,9 @@
     var UP_ARROW_KEY_CODE = 38;
 
     var $search = $('#search');
-    var previousTerm = '';
+    var $suggestions = $('#suggestions');
 
-    // create unordered list to hold suggestions
-    var $suggestions = $('<ul></ul>').attr('id', 'suggestions');
-    $search.after($suggestions);
+    var previousTerm = '';
 
     $search.bind('keyup', function(event) {
         if (event.keyCode === ENTER_KEY_CODE) {
